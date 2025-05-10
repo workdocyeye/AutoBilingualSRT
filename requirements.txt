@@ -1,0 +1,11 @@
+# AutoGen 智能体框架
+pyautogen>=0.2.0  # 用于多智能体编排与对话管理
+
+# SRT 字幕处理库
+srt>=3.5.0        # 用于生成和解析 SRT 字幕文件
+
+# OpenAI SDK（用于兼容 DeepSeek API）
+openai>=1.0.0     # 用于与 DeepSeek LLM 进行 API 交互（需配置 base_url）
+
+# 可选：日志与配置管理
+python-dotenv>=1.0.0  # （可选）用于从 .env 文件加载 API 密钥等配置 
