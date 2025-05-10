@@ -41,11 +41,27 @@ class ChineseChunkerAgent:
         )
         # 解析 LLM 返回内容
         content = response.choices[0].message.content.strip()
-        # 假设 LLM 返回的是 Python 列表格式，使用 eval 解析（实际部署时建议更安全的解析方式）
+        # 尝试解析为 Python 列表
         try:
             result = eval(content)
             if isinstance(result, list):
-                return [str(s).strip() for s in result]
+                clean_result = []
+                for s in result:
+                    s = str(s).strip()
+                    # 只保留非空、无编号、无说明、无总结的短句
+                    if s and not any([
+                        s.startswith("以下"), s.endswith("列表："),
+                        s.startswith("1."), s.startswith("1、"),
+                        s.startswith("请"), s.startswith("注："),
+                        s.startswith("- "), s.startswith("* "),
+                        s.startswith("每条"), s.startswith("总结"),
+                        s.startswith("说明"), s.startswith("输出"),
+                        s.startswith("翻译"), s.startswith("英文"),
+                        s.startswith("保持"), s.startswith("确保"),
+                        s.startswith("All " ), s.startswith("Each ")
+                    ]):
+                        clean_result.append(s)
+                return clean_result
             else:
                 return [content]
         except Exception:
