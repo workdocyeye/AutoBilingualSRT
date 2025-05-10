@@ -1,292 +1,292 @@
 1
-00:00:00,500 --> 00:00:01,500
+00:00:00,500 --> 00:00:03,000
 Hello everyone
 
 2
-00:00:01,700 --> 00:00:03,300
+00:00:03,200 --> 00:00:06,366
 Welcome to my channel
 
 3
-00:00:03,500 --> 00:00:09,100
+00:00:06,566 --> 00:00:15,400
 Today I'd like to share some thoughts and insights on the use of AI
 
 4
-00:00:09,300 --> 00:00:10,500
+00:00:15,600 --> 00:00:18,100
 First of all
 
 5
-00:00:10,700 --> 00:00:12,700
-Get straight to the point
+00:00:18,300 --> 00:00:20,800
+get straight to the point
 
 6
-00:00:12,900 --> 00:00:18,900
+00:00:21,000 --> 00:00:28,833
 I believe all of us in the younger generation should go all in on AI.
 
 7
-00:00:19,100 --> 00:00:22,700
+00:00:29,033 --> 00:00:33,866
 This is the opportunity that belongs to our generation.
 
 8
-00:00:22,900 --> 00:00:30,500
-At this point, a significant number of people would consider AI to be nothing more than a chatting tool.
+00:00:34,066 --> 00:00:43,233
+At this point, a significant number of people would think AI is just a chatting tool.
 
 9
-00:00:30,700 --> 00:00:34,300
+00:00:43,433 --> 00:00:47,933
 Not enough to stir up much of a storm
 
 10
-00:00:34,500 --> 00:00:37,700
+00:00:48,133 --> 00:00:52,633
 This is a completely wrong understanding of AI
 
 11
-00:00:37,900 --> 00:00:43,100
-as long as you take a little time to understand AI in depth
+00:00:52,833 --> 00:00:58,666
+As long as you take a little time to understand AI in depth
 
 12
-00:00:43,300 --> 00:00:46,100
-you'll find it's an absolutely groundbreaking technology
+00:00:58,866 --> 00:01:05,366
+You'll find that this is truly a game-changing technology
 
 13
-00:00:46,300 --> 00:00:49,900
+00:01:05,566 --> 00:01:12,066
 This holds true for any organization or individual alike.
 
 14
-00:00:50,100 --> 00:00:51,300
+00:01:12,266 --> 00:01:14,766
 In my opinion
 
 15
-00:00:51,500 --> 00:00:54,700
-AI has permeated every aspect of my life.
+00:01:14,966 --> 00:01:20,466
+AI has permeated every aspect of my life
 
 16
-00:00:54,900 --> 00:00:59,300
-My studies and daily life are inseparable from this technology now.
+00:01:20,666 --> 00:01:27,499
+My studies and daily life have become inseparable from this technology.
 
 17
-00:00:59,500 --> 00:01:03,900
-If I had to go without using AI for two days
+00:01:27,699 --> 00:01:32,533
+If I had to go without AI for two days
 
 18
-00:01:04,100 --> 00:01:07,300
-My academic life will come to a standstill
+00:01:32,733 --> 00:01:36,899
+My academic life would come to a standstill
 
 19
-00:01:07,500 --> 00:01:11,100
+00:01:37,099 --> 00:01:42,933
 If we have already realized the importance of AI
 
 20
-00:01:11,300 --> 00:01:13,700
+00:01:43,133 --> 00:01:48,299
 So how should we learn AI?
 
 21
-00:01:13,900 --> 00:01:16,300
-We are influenced by exam-oriented education.
+00:01:48,499 --> 00:01:52,333
+We are influenced by exam-oriented education
 
 22
-00:01:16,500 --> 00:01:19,700
-It's easy to fall into such a misconception
+00:01:52,533 --> 00:01:56,699
+often fall into such a misconception
 
 23
-00:01:19,900 --> 00:01:23,100
-Thinking that we must take learning AI seriously
+00:01:56,899 --> 00:02:02,399
+Believing that we must take learning AI seriously
 
 24
-00:01:23,300 --> 00:01:28,500
-Spend a lot of time in the library studying various aspects of AI
+00:02:02,599 --> 00:02:11,099
+Spending long hours in the library learning all kinds of knowledge about AI
 
 25
-00:01:28,700 --> 00:01:30,700
+00:02:11,299 --> 00:02:14,799
 The history of AI development
 
 26
-00:01:30,900 --> 00:01:33,300
-All that useless AI knowledge crap
+00:02:14,999 --> 00:02:20,499
+All that crap about AI and its so-called knowledge
 
 27
-00:01:33,500 --> 00:01:38,300
-This is the flawed learning model that schools have imprinted upon us.
+00:02:20,699 --> 00:02:27,533
+This is the flawed learning model that schools have ingrained in us.
 
 28
-00:01:38,500 --> 00:01:41,300
-We must learn to shed this outdated
+00:02:27,733 --> 00:02:32,233
+We must learn to shed this outdated mindset.
 
 29
-00:01:41,500 --> 00:01:42,700
+00:02:32,433 --> 00:02:35,599
 torturous learning mode
 
 30
-00:01:42,900 --> 00:01:48,100
+00:02:35,799 --> 00:02:42,966
 The way we learn should involve fully utilizing AI in our daily lives.
 
 31
-00:01:48,300 --> 00:01:49,300
+00:02:43,166 --> 00:02:45,666
 any questions
 
 32
-00:01:49,500 --> 00:01:50,500
+00:02:45,866 --> 00:02:48,366
 Any thoughts
 
 33
-00:01:50,700 --> 00:01:55,500
-Explore every project with AI to see if it sparks new innovations
+00:02:48,566 --> 00:02:56,066
+Let's explore how AI can be integrated into any project to spark new possibilities.
 
 34
-00:01:55,700 --> 00:02:02,500
-instead of learning through those outdated models that old professors have been using for over a decade
+00:02:56,266 --> 00:03:05,766
+instead of using those outdated teaching methods from professors that have been obsolete for over a decade
 
 35
-00:02:02,700 --> 00:02:06,300
+00:03:05,966 --> 00:03:12,466
 We should use AI to reshape our learning methods
 
 36
-00:02:06,500 --> 00:02:10,500
-This way you can experience the profound joy of progress.
+00:03:12,666 --> 00:03:18,499
+This way you can experience the profound joy of progress
 
 37
-00:02:10,700 --> 00:02:15,500
+00:03:18,699 --> 00:03:24,199
 Last but not least, this is something I particularly want to emphasize.
 
 38
-00:02:15,700 --> 00:02:20,500
-Learn to use AI to tackle all the bullshit work in college
+00:03:24,399 --> 00:03:33,899
+Learn to use AI to tackle the bullshit work in college
 
 39
-00:02:20,700 --> 00:02:24,300
-Universities are filled with all sorts of meaningless nonsense.
+00:03:34,099 --> 00:03:39,266
+Universities are filled with all sorts of meaningless things.
 
 40
-00:02:24,500 --> 00:02:26,100
+00:03:39,466 --> 00:03:41,966
 a waste of energy
 
 41
-00:02:26,300 --> 00:02:28,300
-tormenting and stifling personal growth
+00:03:42,166 --> 00:03:45,999
+Tormenting and restricting personal growth
 
 42
-00:02:28,500 --> 00:02:30,900
+00:03:46,199 --> 00:03:51,366
 various tasks that stifle human creativity
 
 43
-00:02:31,100 --> 00:02:35,500
+00:03:51,566 --> 00:03:57,399
 Find a way to use AI to tackle these tedious tasks
 
 44
-00:02:35,700 --> 00:02:37,300
-free up more time
+00:03:57,599 --> 00:04:00,099
+Free up more time
 
 45
-00:02:37,500 --> 00:02:42,300
+00:04:00,299 --> 00:04:06,799
 Free up more energy to think about the issues you consider important
 
 46
-00:02:42,500 --> 00:02:44,900
-Learn what you consider important knowledge
+00:04:06,999 --> 00:04:10,833
+Learn what you believe is important
 
 47
-00:02:45,100 --> 00:02:46,300
+00:04:11,033 --> 00:04:13,533
 a person's energy
 
 48
-00:02:46,500 --> 00:02:49,700
+00:04:13,733 --> 00:04:17,566
 Time is the most precious asset one has
 
 49
-00:02:49,900 --> 00:02:51,900
+00:04:17,766 --> 00:04:20,933
 It's not those damn tasks.
 
 50
-00:02:52,100 --> 00:02:53,100
+00:04:21,133 --> 00:04:23,633
 Fake credits
 
 51
-00:02:53,300 --> 00:02:57,300
+00:04:23,833 --> 00:04:31,999
 Also, if any school assignments prohibit the use of AI
 
 52
-00:02:57,500 --> 00:02:59,900
-Or limit the use of AI
+00:04:32,199 --> 00:04:35,699
+or restrict the use of AI
 
 53
-00:03:00,100 --> 00:03:04,100
+00:04:35,899 --> 00:04:42,733
 Then there's a 99% chance this task is already outdated.
 
 54
-00:03:04,300 --> 00:03:06,300
-AI can easily replace it.
+00:04:42,933 --> 00:04:46,766
+AI can easily replace it
 
 55
-00:03:06,500 --> 00:03:11,700
+00:04:46,966 --> 00:04:53,799
 The old evaluation system can no longer filter or screen effectively through this.
 
 56
-00:03:11,900 --> 00:03:14,700
+00:04:53,999 --> 00:04:58,499
 But the old evaluation system has inertia.
 
 57
-00:03:14,900 --> 00:03:16,500
-has a time lag
+00:04:58,699 --> 00:05:01,199
+with a time lag
 
 58
-00:03:16,700 --> 00:03:20,700
-They won't let you pass these task evaluations so easily.
+00:05:01,399 --> 00:05:09,233
+They won't let you pass these task evaluations easily and casually.
 
 59
-00:03:20,900 --> 00:03:22,900
-Take the thesis for example
+00:05:09,433 --> 00:05:13,266
+Take writing a thesis for example
 
 60
-00:03:23,100 --> 00:03:29,900
+00:05:13,466 --> 00:05:23,299
 If an undergraduate student can meet the standards of a graduation thesis with the help of AI
 
 61
-00:03:30,100 --> 00:03:33,700
+00:05:23,499 --> 00:05:30,333
 Then why waste more effort obsessing over those words?
 
 62
-00:03:33,900 --> 00:03:41,500
-Spending a ton of energy interacting with advisors to produce content universally acknowledged as meaningless for students' long-term development
+00:05:30,533 --> 00:05:43,033
+Spending a ton of energy interacting with advisors to produce content widely recognized as meaningless for students' long-term development
 
 63
-00:03:41,700 --> 00:03:45,700
-Then why not let AI assist in solving these tasks?
+00:05:43,233 --> 00:05:49,399
+Why not use AI to assist in solving these tasks?
 
 64
-00:03:45,900 --> 00:03:49,100
-Calling it training students' abilities is all bullshit.
+00:05:49,599 --> 00:05:56,766
+Calling it "developing students' abilities" is all bullshit.
 
 65
-00:03:49,300 --> 00:03:52,900
+00:05:56,966 --> 00:06:00,799
 You should know that the ability to write papers
 
 66
-00:03:53,100 --> 00:03:57,900
-Long ago, it became utterly meaningless for students' personal development in society.
+00:06:00,999 --> 00:06:08,499
+Long ago, it became meaningless for students themselves to develop in society.
 
 67
-00:03:58,100 --> 00:04:03,300
+00:06:08,699 --> 00:06:13,533
 Now, with the added impact of AI, this is even more the case.
 
 68
-00:04:03,500 --> 00:04:08,300
-The more essential skill to master is the in-depth utilization of AI.
+00:06:13,733 --> 00:06:19,899
+The more essential skill to master is the deep utilization of AI.
 
 69
-00:04:08,500 --> 00:04:12,100
-instead of being stuck in this distorted evaluation system
+00:06:20,099 --> 00:06:25,599
+rather than being stuck in this distorted evaluation system
 
 70
-00:04:12,300 --> 00:04:13,900
+00:06:25,799 --> 00:06:28,299
 neither here nor there
 
 71
-00:04:14,100 --> 00:04:16,500
+00:06:28,499 --> 00:06:32,333
 We should think outside the box
 
 72
-00:04:16,700 --> 00:04:19,100
+00:06:32,533 --> 00:06:35,699
 Exploring the possibility of a breakthrough
 
 73
-00:04:19,300 --> 00:04:25,300
-instead of being constrained by all sorts of old rules that stifle judgment and creativity
+00:06:35,899 --> 00:06:45,066
+instead of being constrained by all sorts of outdated rules that limit one's judgment and creativity
 

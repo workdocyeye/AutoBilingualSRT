@@ -17,11 +17,17 @@ class EnglishSrtAgent:
     """
     英文SRT生成与计时智能体：根据英文短句生成SRT字幕及时间戳。
     """
-    def __init__(self, wpm=TARGET_WPM, min_duration_ms=MIN_SUBTITLE_DURATION_MS, pause_ms=SUBTITLE_PAUSE_MS, initial_offset_ms=INITIAL_OFFSET_MS):
+    def __init__(self, wpm=150, min_duration_ms=1000, pause_ms=200, initial_offset_ms=500, extra_sec=0.0):
+        # wpm: 每分钟单词数，表示英文朗读速度。数值越小，字幕显示时间越长。推荐范围：120~180。
         self.wpm = wpm
+        # min_duration: 每条字幕最小显示时长（毫秒），防止短句闪烁。推荐范围：800~1500。
         self.min_duration = min_duration_ms / 1000  # 转为秒
+        # pause: 字幕间的停顿时长（毫秒），控制两条字幕之间的间隔。推荐范围：200~300。
         self.pause = pause_ms / 1000  # 转为秒
+        # initial_offset: 首条字幕的初始偏移（毫秒），用于视频开头预留缓冲。推荐范围：300~1000。
         self.initial_offset = initial_offset_ms / 1000  # 转为秒
+        # extra_sec: 每条字幕额外增加的缓冲秒数，便于后期剪辑。英文一般可设为0或0.2。
+        self.extra_sec = extra_sec
 
     def generate_srt(self, english_chunks: list) -> tuple:
         """
@@ -32,7 +38,7 @@ class EnglishSrtAgent:
         timestamps = []
         current = datetime.timedelta(seconds=self.initial_offset)
         for text in english_chunks:
-            duration = estimate_duration(text, self.wpm, self.min_duration)
+            duration = estimate_duration(text, wpm=self.wpm, min_duration=self.min_duration) + self.extra_sec
             start = current
             end = start + datetime.timedelta(seconds=duration)
             timestamps.append((start, end))

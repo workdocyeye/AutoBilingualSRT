@@ -9,16 +9,22 @@ import datetime
 from typing import List
 
 # 工具函数：根据英文文本和朗读速率计算持续时长（秒）
-def estimate_duration(text: str, wpm: int = 150, min_duration: float = 1.0) -> float:
+def estimate_duration(text: str, wpm: int = 150, min_duration: float = 1.0, lang: str = "en") -> float:
     """
-    根据英文文本和朗读速率估算朗读时长（秒）。
-    :param text: 英文字幕文本
-    :param wpm: 每分钟单词数（Words Per Minute）
+    根据文本和朗读速率估算朗读时长（秒）。
+    :param text: 字幕文本
+    :param wpm: 英文为每分钟单词数，中文为每分钟汉字数
     :param min_duration: 最小持续时长（秒）
+    :param lang: "en" 或 "zh"
     :return: 估算的持续时长（秒）
     """
-    word_count = len(text.split())
-    duration = max(word_count / wpm * 60, min_duration)
+    if lang == "zh":
+        char_count = len([c for c in text if c.strip()])
+        cpm = wpm  # 这里wpm参数实际为cpm
+        duration = max(char_count / cpm * 60, min_duration)
+    else:
+        word_count = len(text.split())
+        duration = max(word_count / wpm * 60, min_duration)
     return duration
 
 # 工具函数：生成 SRT 条目列表

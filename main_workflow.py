@@ -11,6 +11,11 @@ from agents.chunker_agent import ChineseChunkerAgent
 from agents.translator_agent import TranslationAgent
 from agents.english_srt_agent import EnglishSrtAgent
 from agents.chinese_srt_agent import ChineseSrtAgent
+import sys
+
+# GUI 配置对话框
+import tkinter as tk
+from tkinter import filedialog, messagebox
 
 OUTPUT_DIR = "output"
 
@@ -40,10 +45,78 @@ def get_input_text() -> str:
         print("无效选择，程序退出。")
         exit(1)
 
-def main():
-    # 1. 获取用户输入的原文
-    input_text = get_input_text()
-    print("\n原文内容：\n" + input_text)
+# GUI 配置对话框
+class SubtitleConfigDialog:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("字幕生成设置")
+        self.input_text = ""
+        self.input_mode = tk.StringVar(value="manual")
+        self.time_basis = tk.StringVar(value="en")
+        self.file_path = tk.StringVar(value="")
+
+        # 输入方式选择
+        tk.Label(root, text="请选择输入方式：").pack(anchor="w")
+        tk.Radiobutton(root, text="手动输入", variable=self.input_mode, value="manual", command=self.show_manual_input).pack(anchor="w")
+        tk.Radiobutton(root, text="选择txt文件", variable=self.input_mode, value="file", command=self.show_file_input).pack(anchor="w")
+
+        # 手动输入文本框
+        self.text_input = tk.Text(root, height=10, width=60)
+        self.text_input.pack()
+        self.text_input.insert("1.0", "请输入/粘贴完整中文原文...")
+
+        # 文件选择按钮
+        self.file_frame = tk.Frame(root)
+        self.file_entry = tk.Entry(self.file_frame, textvariable=self.file_path, width=50)
+        self.file_entry.pack(side="left")
+        self.file_btn = tk.Button(self.file_frame, text="选择文件", command=self.select_file)
+        self.file_btn.pack(side="left")
+        self.file_frame.pack_forget()  # 默认隐藏
+
+        # 时间分配依据
+        tk.Label(root, text="请选择SRT时间戳分配依据：").pack(anchor="w")
+        tk.Radiobutton(root, text="以英文为主", variable=self.time_basis, value="en").pack(anchor="w")
+        tk.Radiobutton(root, text="以中文为主", variable=self.time_basis, value="zh").pack(anchor="w")
+
+        # 确认按钮
+        tk.Button(root, text="开始生成", command=self.on_confirm).pack(pady=10)
+
+    def show_manual_input(self):
+        self.text_input.pack()
+        self.file_frame.pack_forget()
+
+    def show_file_input(self):
+        self.text_input.pack_forget()
+        self.file_frame.pack()
+
+    def select_file(self):
+        path = filedialog.askopenfilename(filetypes=[("Text Files", "*.txt")])
+        if path:
+            self.file_path.set(path)
+
+    def on_confirm(self):
+        if self.input_mode.get() == "manual":
+            self.input_text = self.text_input.get("1.0", "end").strip()
+            if not self.input_text:
+                messagebox.showerror("错误", "请输入原文内容！")
+                return
+        else:
+            path = self.file_path.get()
+            if not path:
+                messagebox.showerror("错误", "请选择txt文件！")
+                return
+            with open(path, "r", encoding="utf-8") as f:
+                self.input_text = f.read()
+        self.root.quit()  # 关闭窗口
+
+# 主流程函数，支持传入 input_text 和 time_basis
+
+def main(input_text=None, time_basis=None):
+    if input_text is None or time_basis is None:
+        # 兼容命令行老逻辑
+        input_text = get_input_text()
+        print("\n原文内容：\n" + input_text)
+        time_basis = "en"
 
     # 2. 中文切分
     print("\n正在切分中文文本...")
@@ -61,21 +134,24 @@ def main():
     for idx, chunk in enumerate(english_chunks, 1):
         print(f"{idx}. {chunk}")
 
-    # 4. 英文SRT生成
-    print("\n正在生成英文SRT...")
-    en_srt_agent = EnglishSrtAgent()
-    print("英文短句列表：", english_chunks)
-    en_srt_content, timestamps = en_srt_agent.generate_srt(english_chunks)
-    print("英文SRT内容：\n", en_srt_content)
-    print("英文SRT时间戳列表：", timestamps)
+    # 4. SRT生成
+    if time_basis == "zh":
+        print("\n以中文为依据生成时间戳...")
+        from agents.chinese_timestamp_agent import ChineseTimestampAgent
+        zh_timestamp_agent = ChineseTimestampAgent()
+        zh_srt_content, timestamps = zh_timestamp_agent.generate_srt(chinese_chunks)
+        zh_srt_agent = ChineseSrtAgent()
+        zh_srt_content = zh_srt_agent.generate_srt(chinese_chunks, timestamps)
+        en_srt_agent = ChineseSrtAgent()
+        en_srt_content = en_srt_agent.generate_srt(english_chunks, timestamps)
+    else:
+        print("\n以英文为依据生成时间戳...")
+        en_srt_agent = EnglishSrtAgent()
+        en_srt_content, timestamps = en_srt_agent.generate_srt(english_chunks)
+        zh_srt_agent = ChineseSrtAgent()
+        zh_srt_content = zh_srt_agent.generate_srt(chinese_chunks, timestamps)
 
-    # 5. 中文SRT生成（严格复用英文时间戳）
-    print("正在生成中文SRT...")
-    zh_srt_agent = ChineseSrtAgent()
-    zh_srt_content = zh_srt_agent.generate_srt(chinese_chunks, timestamps)
-    print("中文SRT内容：\n", zh_srt_content)
-
-    # 6. 输出/保存SRT文件
+    # 5. 输出/保存SRT文件
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
     en_srt_path = os.path.join(OUTPUT_DIR, "output_en.srt")
@@ -88,4 +164,15 @@ def main():
     print(f"中文SRT已保存到: {zh_srt_path}")
 
 if __name__ == "__main__":
-    main() 
+    # 判断是否为交互式终端，优先弹出GUI
+    try:
+        import tkinter as tk
+        root = tk.Tk()
+        dialog = SubtitleConfigDialog(root)
+        root.mainloop()
+        input_text = dialog.input_text
+        time_basis = dialog.time_basis.get()
+        main(input_text, time_basis)
+    except Exception as e:
+        print("GUI 启动失败，回退到命令行模式：", e)
+        main() 
