@@ -18,15 +18,15 @@ class ChineseTimestampAgent:
     """
     def __init__(self, cpm=180, min_duration_ms=2000, pause_ms=200, initial_offset_ms=500, extra_sec=0.5):
         # cpm: 每分钟汉字数，表示朗读速度。数值越小，字幕显示时间越长。推荐范围：150~250。
-        self.cpm = cpm  # 每分钟汉字数，调低以延长字幕时长
+        self.cpm = cpm  # 每分钟汉字数，调低以延长字幕时长，用户可调节
         # min_duration: 每条字幕最小显示时长（毫秒），防止短句闪烁。数值越大，短字幕显示时间越长。推荐范围：1500~2500。
-        self.min_duration = min_duration_ms / 1000  # 转为秒
+        self.min_duration = min_duration_ms / 1000  # 转为秒，用户可调节
         # pause: 字幕间的停顿时长（毫秒），控制两条字幕之间的间隔。推荐范围：200~300。
-        self.pause = pause_ms / 1000  # 转为秒
+        self.pause = pause_ms / 1000  # 转为秒，用户可调节
         # initial_offset: 首条字幕的初始偏移（毫秒），用于视频开头预留缓冲。推荐范围：300~1000。
-        self.initial_offset = initial_offset_ms / 1000  # 转为秒
+        self.initial_offset = initial_offset_ms / 1000  # 转为秒，用户可调节
         # extra_sec: 每条字幕额外增加的缓冲秒数，进一步延长字幕显示时间，便于后期剪辑。推荐范围：0.5~1.0。
-        self.extra_sec = extra_sec  # 每条字幕额外增加的缓冲秒数
+        self.extra_sec = extra_sec  # 每条字幕额外增加的缓冲秒数，用户可调节
 
     def generate_srt(self, chinese_chunks: list) -> tuple:
         """

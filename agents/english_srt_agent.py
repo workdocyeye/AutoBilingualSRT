@@ -19,15 +19,15 @@ class EnglishSrtAgent:
     """
     def __init__(self, wpm=150, min_duration_ms=1000, pause_ms=200, initial_offset_ms=500, extra_sec=0.0):
         # wpm: 每分钟单词数，表示英文朗读速度。数值越小，字幕显示时间越长。推荐范围：120~180。
-        self.wpm = wpm
+        self.wpm = wpm  # 用户可调节，影响字幕显示速度
         # min_duration: 每条字幕最小显示时长（毫秒），防止短句闪烁。推荐范围：800~1500。
-        self.min_duration = min_duration_ms / 1000  # 转为秒
+        self.min_duration = min_duration_ms / 1000  # 转为秒，用户可调节
         # pause: 字幕间的停顿时长（毫秒），控制两条字幕之间的间隔。推荐范围：200~300。
-        self.pause = pause_ms / 1000  # 转为秒
+        self.pause = pause_ms / 1000  # 转为秒，用户可调节
         # initial_offset: 首条字幕的初始偏移（毫秒），用于视频开头预留缓冲。推荐范围：300~1000。
-        self.initial_offset = initial_offset_ms / 1000  # 转为秒
+        self.initial_offset = initial_offset_ms / 1000  # 转为秒，用户可调节
         # extra_sec: 每条字幕额外增加的缓冲秒数，便于后期剪辑。英文一般可设为0或0.2。
-        self.extra_sec = extra_sec
+        self.extra_sec = extra_sec  # 用户可调节
 
     def generate_srt(self, english_chunks: list) -> tuple:
         """
