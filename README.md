@@ -22,8 +22,8 @@
 
 1. **克隆项目**
    ```bash
-   git clone https://github.com/yourname/createsrt.git
-   cd createsrt
+   git clone git@github.com:workdocyeye/AutoBilingualSRT.git
+   cd AutoBilingualSRT
    ```
 
 2. **安装依赖**
